@@ -53,8 +53,12 @@ while IFS= read -r raw_line || [[ -n "${raw_line}" ]]; do
 	fi
 
 	mkdir -p "$(dirname "${dst_path}")"
-	cp -f "${src_path}" "${dst_path}"
-	copied=$((copied + 1))
+	if cp -f "${src_path}" "${dst_path}"; then
+		copied=$((copied + 1))
+	else
+		echo "MISSING: ${src_rel}"
+		missing=$((missing + 1))
+	fi
 done < "${LIST_FILE}"
 
 echo "Copied ${copied} files into ${OUT_DIR}."

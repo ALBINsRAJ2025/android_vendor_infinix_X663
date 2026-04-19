@@ -36,6 +36,8 @@ SEARCH_DIRS=(
     "${SRC_DIR}/vendor/lib"
     "${SRC_DIR}/vendor/lib64/hw"
     "${SRC_DIR}/vendor/lib/hw"
+    "${SRC_DIR}/vendor/lib64/egl"
+    "${SRC_DIR}/vendor/lib/egl"
     "${SRC_DIR}/system/system/lib64"
     "${SRC_DIR}/system/system/lib"
     "${SRC_DIR}/system/system/lib64/bootstrap"
