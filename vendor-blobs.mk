@@ -68,6 +68,13 @@ PRODUCT_COPY_FILES += \\
     vendor/infinix/X663/proprietary/vendor/etc/init/init.md_apps.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.md_apps.rc \\
     vendor/infinix/X663/proprietary/vendor/etc/init/init.gps_drv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.gps_drv.rc \\
     vendor/infinix/X663/proprietary/vendor/etc/init/init.bt_drv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.bt_drv.rc \\
+    vendor/infinix/X663/proprietary/vendor/etc/init/hw/init.connectivity.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.connectivity.rc \\
+    vendor/infinix/X663/proprietary/vendor/etc/init/hw/init_connectivity.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init_connectivity.rc \\
+    vendor/infinix/X663/proprietary/vendor/etc/init/hw/init.connectivity.common.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.connectivity.common.rc \\
+    vendor/infinix/X663/proprietary/vendor/etc/init/hw/init.mt6768.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mt6768.usb.rc \\
+    vendor/infinix/X663/proprietary/vendor/etc/init/hw/init.sensor_1_0.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.sensor_1_0.rc \\
+    vendor/infinix/X663/proprietary/vendor/etc/init/hw/init.modem.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.modem.rc \\
+    vendor/infinix/X663/proprietary/vendor/etc/init/hw/init.project.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.project.rc \\
     vendor/infinix/X663/proprietary/vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc \\
     vendor/infinix/X663/proprietary/vendor/etc/init/android.hardware.gnss-service.mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gnss-service.mediatek.rc \\
     vendor/infinix/X663/proprietary/vendor/etc/init/android.hardware.sensors@2.0-service.multihal-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.sensors@2.0-service.multihal-mediatek.rc \\
