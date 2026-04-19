@@ -1,0 +1,19 @@
+# X663 proprietary blob seed list
+# Full extracted inventory reference:
+#   docs/vendor_file_list.txt
+
+# Core VINTF/permissions
+vendor/etc/vintf/manifest.xml
+vendor/etc/permissions/android.hardware.wifi.xml
+vendor/etc/permissions/android.hardware.bluetooth.xml
+vendor/etc/permissions/android.hardware.camera.xml
+vendor/etc/permissions/android.hardware.telephony.gsm.xml
+
+# Media/audio baseline
+vendor/etc/audio_policy_configuration.xml
+vendor/etc/media_codecs.xml
+vendor/etc/media_profiles_V1_0.xml
+
+# Firmware/modules baseline
+vendor/etc/firmware
+vendor/lib/modules
