@@ -1,0 +1,5 @@
+# Provisional allowlist for dependencies not present in stock dump as standalone .so files.
+# Keep this list minimal; each entry must be justified in docs/vendor_dependency_report.txt
+# and revalidated against built images/runtime.
+android.hardware.gnss-V1-ndk_platform.so
+android.hardware.power-V2-ndk_platform.so
