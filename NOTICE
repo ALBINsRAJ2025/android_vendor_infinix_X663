@@ -1,0 +1,19 @@
+Infinix Note 11 (X663) vendor tree
+Copyright (C) 2026 ALBINsRAJ2025
+
+The original makefiles, scripts, file lists and documentation in this
+repository are licensed under the Apache License, Version 2.0.  See LICENSE.
+
+Third-party material
+--------------------
+* proprietary/ contains stock firmware extracted from the Infinix X663
+  vendor partition.  It is not committed to Git and is not licensed under
+  Apache-2.0; it remains subject to Infinix/Transsion terms.  It is included
+  only for local device bring-up and must not be redistributed without
+  permission.
+* The vendor SELinux CIL, context files, precompiled policy, HAL binaries,
+  libraries and configuration files under proprietary/ are part of that
+  stock firmware.
+
+This repository intentionally does not contain or use a `vendor.img`.  The
+vendor partition is built from the source tree and the extracted blobs.

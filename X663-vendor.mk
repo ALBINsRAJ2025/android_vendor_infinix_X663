@@ -1,7 +1,9 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (C) 2026 ALBINsRAJ2025
 # Vendor makefile for the Infinix Note 11 (X663).
 #
 # Installs the stock vendor tree from proprietary/ and recreates its symlinks.
-# Inherited by the source-built vendor image variant.
+# Inherited by device/infinix/X663/device.mk.
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/infinix/X663/proprietary,$(TARGET_COPY_OUT_VENDOR))

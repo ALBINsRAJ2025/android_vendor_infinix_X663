@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (C) 2026 ALBINsRAJ2025
 # Vendor symlink module for the Infinix X663.
 # PRODUCT_COPY_FILES cannot preserve symlinks, so recreate them after
 # installation.

@@ -1,4 +1,6 @@
 #!/bin/bash
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (C) 2026 ALBINsRAJ2025
 #
 # Re-extract the proprietary files for the Infinix Note 11 (X663).
 #
