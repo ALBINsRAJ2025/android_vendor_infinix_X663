@@ -212,5 +212,9 @@ LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
 LOCAL_MODULE_STEM := x663_vendor_symlinks
 LOCAL_SRC_FILES := symlinks.dummy
 LOCAL_MODULE_TAGS := optional
-LOCAL_POST_INSTALL_CMD := $(foreach s,$(X663_SYMLINKS),ln -sf $(word 2,$(subst :, ,$(s))) $(TARGET_OUT_VENDOR)/$(word 1,$(subst :, ,$(s)));)
+LOCAL_POST_INSTALL_CMD := \
+    rm -f $(TARGET_OUT_VENDOR)/etc/x663_vendor_symlinks; \
+    $(foreach s,$(X663_SYMLINKS), \
+        mkdir -p $(dir $(TARGET_OUT_VENDOR)/$(word 1,$(subst :, ,$(s)))); \
+        ln -sfn "$(word 2,$(subst :, ,$(s)))" "$(TARGET_OUT_VENDOR)/$(word 1,$(subst :, ,$(s)))";)
 include $(BUILD_PREBUILT)
