@@ -1,3 +1,3 @@
 # SPDX-License-Identifier: Apache-2.0
-# Local vendor blob payload (not pushed to GitHub)
-/proprietary/
+# The stock vendor blob payload is included in this repository.
+# The blobs are not Apache-2.0; see NOTICE.

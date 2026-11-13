@@ -7,10 +7,10 @@ repository are licensed under the Apache License, Version 2.0.  See LICENSE.
 Third-party material
 --------------------
 * proprietary/ contains stock firmware extracted from the Infinix X663
-  vendor partition.  It is not committed to Git and is not licensed under
-  Apache-2.0; it remains subject to Infinix/Transsion terms.  It is included
-  only for local device bring-up and must not be redistributed without
-  permission.
+  vendor partition.  It is included in this repository for device bring-up
+  but is not licensed under Apache-2.0; it remains subject to
+  Infinix/Transsion terms.  No additional license or redistribution right is
+  granted by this repository.
 * The vendor SELinux CIL, context files, precompiled policy, HAL binaries,
   libraries and configuration files under proprietary/ are part of that
   stock firmware.
