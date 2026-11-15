@@ -28,7 +28,9 @@ every path is unchanged.
 ./extract-files.sh /path/to/stock_dump
 ```
 
-Expects a directory with `vendor/` inside, not `vendor.img`.
+Expects a directory with `vendor/` inside, not `vendor.img`. The script copies
+each entry with `cp -a`, so symlinks keep the stock link text (including the
+two absolute `vulkan.mt6768.so` targets); it does not rewrite them.
 
 ## Build wiring
 
