@@ -34,6 +34,39 @@ NOTICE                   third-party blob notice
 offline use; no separate stock dump is required.  Git stores the 196 symlinks
 as links, so they survive a clone.
 
+## Stock naming and provenance
+
+The source of truth is the **SP Flash Tool package**
+`stock_firmware/spflashtool_firmware/super.img`.  The vendor partition was
+unpacked from it with the Android 12 otatools and compared with this tree:
+
+```bash
+simg2img stock_firmware/spflashtool_firmware/super.img super.raw.img
+lpunpack super.raw.img parts/
+debugfs -R "rdump / vendor" parts/vendor_a.img
+```
+
+Result:
+
+* **every path in `proprietary/` is the stock `/vendor` path, unchanged** —
+  no renaming, no flattening, no case changes;
+* **2,222 of 2,222 regular files are byte-identical** (SHA-256);
+* **196 of 196 symlinks exist in both trees with identical targets**, including
+  the two that the stock device uses as absolute links
+  (`lib/hw/vulkan.mt6768.so` → `/vendor/lib/egl/libGLES_mali.so` and
+  `lib64/hw/vulkan.mt6768.so` → `/vendor/lib64/egl/libGLES_mali.so`);
+* the stock vendor root additionally contains the generated `build.prop` and
+  the ext4 `lost+found` directory; neither is a blob and neither is shipped.
+
+The stock file list in `installed-files-vendor.txt` has 2,419 entries — the
+2,418 payload files and links plus the generated `/vendor/build.prop` — which
+matches this tree exactly.
+
+`Android.mk` recreates the symlinks with the **stock link text**, absolute
+where the device uses absolute links and relative where it uses relative
+ones.  `proprietary-files.txt` lists the same 2,418 paths in stock order.
+
+
 ## Extracting the blobs
 
 `extract-files.sh` expects a directory containing the stock `vendor/` tree:
