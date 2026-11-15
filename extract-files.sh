@@ -42,12 +42,4 @@ while IFS= read -r line; do
     fi
 done < "$LIST"
 
-# Replace the two host-path vulkan symlinks with device-relative links.
-for f in lib/hw/vulkan.mt6768.so lib64/hw/vulkan.mt6768.so; do
-    p="$DEST/$f"
-    rm -f "$p"
-    mkdir -p "$(dirname "$p")"
-    ln -s ../egl/libGLES_mali.so "$p"
-done
-
 echo "Done. Blobs are in $DEST"
