@@ -36,7 +36,7 @@ as links, so they survive a clone.
 
 ## Stock naming and provenance
 
-The source of truth is the **SP Flash Tool package**
+The source of truth is the **stock firmware**
 `stock_firmware/spflashtool_firmware/super.img`.  The vendor partition was
 unpacked from it with the Android 12 otatools and compared with this tree:
 
