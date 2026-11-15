@@ -191,7 +191,7 @@ X663_SYMLINKS := \
     lib/hw/gatekeeper.default.so:libSoftGatekeeper.so \
     lib/hw/gatekeeper.trustonic.so:libMcGatekeeper.so \
     lib/hw/kmsetkey.default.so:kmsetkey.trustonic.so \
-    lib/hw/vulkan.mt6768.so:../egl/libGLES_mali.so \
+    lib/hw/vulkan.mt6768.so:/vendor/lib/egl/libGLES_mali.so \
     lib/libdpframework.so:mt6768/libdpframework.so \
     lib/libmtk_drvb.so:mt6768/libmtk_drvb.so \
     lib/libnir_neon_driver.so:mt6768/libnir_neon_driver.so \
@@ -199,7 +199,7 @@ X663_SYMLINKS := \
     lib64/hw/gatekeeper.default.so:libSoftGatekeeper.so \
     lib64/hw/gatekeeper.trustonic.so:libMcGatekeeper.so \
     lib64/hw/kmsetkey.default.so:kmsetkey.trustonic.so \
-    lib64/hw/vulkan.mt6768.so:../egl/libGLES_mali.so \
+    lib64/hw/vulkan.mt6768.so:/vendor/lib64/egl/libGLES_mali.so \
     lib64/libdpframework.so:mt6768/libdpframework.so \
     lib64/libmtk_drvb.so:mt6768/libmtk_drvb.so \
     lib64/libnir_neon_driver.so:mt6768/libnir_neon_driver.so \
