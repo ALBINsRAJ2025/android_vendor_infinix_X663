@@ -4,4 +4,6 @@
 #
 # Board configuration is defined in device/infinix/X663.
 
-DEVICE_MANIFEST_FILE += vendor/infinix/X663/proprietary/etc/vintf/manifest.xml
+DEVICE_MANIFEST_FILE += \
+    vendor/infinix/X663/proprietary/etc/vintf/manifest.xml \
+    $(wildcard vendor/infinix/X663/proprietary/etc/vintf/manifest/*.xml)
