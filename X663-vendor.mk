@@ -6,7 +6,7 @@
 # Inherited by device/infinix/X663/device.mk.
 
 PRODUCT_COPY_FILES += \
-    $(filter-out %.apk,$(call find-copy-subdir-files,*,vendor/infinix/X663/proprietary,$(TARGET_COPY_OUT_VENDOR)))
+    $(filter-out %.apk proprietary/etc/vintf/%,$(call find-copy-subdir-files,*,vendor/infinix/X663/proprietary,$(TARGET_COPY_OUT_VENDOR)))
 
 PRODUCT_PACKAGES += \
     x663_vendor_symlinks \
