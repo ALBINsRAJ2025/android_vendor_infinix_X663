@@ -6,7 +6,22 @@
 # Inherited by device/infinix/X663/device.mk.
 
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,vendor/infinix/X663/proprietary,$(TARGET_COPY_OUT_VENDOR))
+    $(filter-out %.apk,$(call find-copy-subdir-files,*,vendor/infinix/X663/proprietary,$(TARGET_COPY_OUT_VENDOR)))
 
 PRODUCT_PACKAGES += \
-    x663_vendor_symlinks
+    x663_vendor_symlinks \
+    GoogleNetworkStackResOverlay \
+    GoogleTetheringResOverlay \
+    InProcessTetheringResOverlay \
+    NetworkStackInProcessResOverlay \
+    NetworkStackResOverlay \
+    TetheringResOverlay \
+    CellbroadcastUIResOverlay \
+    ConnectivityResOverlay \
+    FrameworkResOverlay \
+    FrameworkResOverlayExt \
+    MtkSettingsResOverlay \
+    SettingsProviderResOverlay \
+    SystemUIResOverlay \
+    WifiResMainlineOverlay \
+    WifiResOverlay

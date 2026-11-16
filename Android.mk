@@ -6,6 +6,126 @@
 
 LOCAL_PATH := $(call my-dir)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := GoogleNetworkStackResOverlay
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/app/GoogleNetworkStackResOverlay
+LOCAL_SRC_FILES := proprietary/app/GoogleNetworkStackResOverlay/GoogleNetworkStackResOverlay.apk
+LOCAL_CERTIFICATE := PRESIGNED
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := GoogleTetheringResOverlay
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/app/GoogleTetheringResOverlay
+LOCAL_SRC_FILES := proprietary/app/GoogleTetheringResOverlay/GoogleTetheringResOverlay.apk
+LOCAL_CERTIFICATE := PRESIGNED
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := InProcessTetheringResOverlay
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/app/InProcessTetheringResOverlay
+LOCAL_SRC_FILES := proprietary/app/InProcessTetheringResOverlay/InProcessTetheringResOverlay.apk
+LOCAL_CERTIFICATE := PRESIGNED
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := NetworkStackInProcessResOverlay
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/app/NetworkStackInProcessResOverlay
+LOCAL_SRC_FILES := proprietary/app/NetworkStackInProcessResOverlay/NetworkStackInProcessResOverlay.apk
+LOCAL_CERTIFICATE := PRESIGNED
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := NetworkStackResOverlay
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/app/NetworkStackResOverlay
+LOCAL_SRC_FILES := proprietary/app/NetworkStackResOverlay/NetworkStackResOverlay.apk
+LOCAL_CERTIFICATE := PRESIGNED
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := TetheringResOverlay
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/app/TetheringResOverlay
+LOCAL_SRC_FILES := proprietary/app/TetheringResOverlay/TetheringResOverlay.apk
+LOCAL_CERTIFICATE := PRESIGNED
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := CellbroadcastUIResOverlay
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/overlay/CellbroadcastUIResOverlay
+LOCAL_SRC_FILES := proprietary/overlay/CellbroadcastUIResOverlay/CellbroadcastUIResOverlay.apk
+LOCAL_CERTIFICATE := PRESIGNED
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := ConnectivityResOverlay
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/overlay/ConnectivityResOverlay
+LOCAL_SRC_FILES := proprietary/overlay/ConnectivityResOverlay/ConnectivityResOverlay.apk
+LOCAL_CERTIFICATE := PRESIGNED
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := FrameworkResOverlay
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/overlay/FrameworkResOverlay
+LOCAL_SRC_FILES := proprietary/overlay/FrameworkResOverlay/FrameworkResOverlay.apk
+LOCAL_CERTIFICATE := PRESIGNED
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := FrameworkResOverlayExt
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/overlay/FrameworkResOverlayExt
+LOCAL_SRC_FILES := proprietary/overlay/FrameworkResOverlayExt/FrameworkResOverlayExt.apk
+LOCAL_CERTIFICATE := PRESIGNED
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := MtkSettingsResOverlay
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/overlay/MtkSettingsResOverlay
+LOCAL_SRC_FILES := proprietary/overlay/MtkSettingsResOverlay/MtkSettingsResOverlay.apk
+LOCAL_CERTIFICATE := PRESIGNED
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := SettingsProviderResOverlay
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/overlay/SettingsProviderResOverlay
+LOCAL_SRC_FILES := proprietary/overlay/SettingsProviderResOverlay/SettingsProviderResOverlay.apk
+LOCAL_CERTIFICATE := PRESIGNED
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := SystemUIResOverlay
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/overlay/SystemUIResOverlay
+LOCAL_SRC_FILES := proprietary/overlay/SystemUIResOverlay/SystemUIResOverlay.apk
+LOCAL_CERTIFICATE := PRESIGNED
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := WifiResMainlineOverlay
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/overlay/WifiResMainlineOverlay
+LOCAL_SRC_FILES := proprietary/overlay/WifiResMainlineOverlay/WifiResMainlineOverlay.apk
+LOCAL_CERTIFICATE := PRESIGNED
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := WifiResOverlay
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/overlay/WifiResOverlay
+LOCAL_SRC_FILES := proprietary/overlay/WifiResOverlay/WifiResOverlay.apk
+LOCAL_CERTIFICATE := PRESIGNED
+include $(BUILD_PREBUILT)
+
 # <link path under /vendor>:<relative target>
 X663_SYMLINKS := \
     bin/[:toybox_vendor \
