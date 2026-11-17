@@ -5,8 +5,17 @@
 # Installs the stock vendor tree from proprietary/ and recreates its symlinks.
 # Inherited by device/infinix/X663/device.mk.
 
+# vendor/bin/applypatch and vendor/etc/init/vendor_flash_recovery.rc are not
+# copied: Android 12's base_vendor.mk lists the AOSP `applypatch` module, which
+# installs both files to the same paths, and kati refuses two rules for one
+# target ("overriding commands"). The blobs stay in proprietary/ (the stock
+# payload is unchanged); the image carries AOSP's binary and its full init rc,
+# which is what the platform's update_engine expects.
 PRODUCT_COPY_FILES += \
-    $(filter-out %.apk vendor/infinix/X663/proprietary/etc/vintf/% \
+    $(filter-out %.apk \
+        vendor/infinix/X663/proprietary/bin/applypatch:% \
+        vendor/infinix/X663/proprietary/etc/init/vendor_flash_recovery.rc:% \
+        vendor/infinix/X663/proprietary/etc/vintf/% \
         vendor/infinix/X663/proprietary/etc/selinux/precompiled_sepolicy \
         vendor/infinix/X663/proprietary/etc/selinux/precompiled_sepolicy.%,\
         $(call find-copy-subdir-files,*,vendor/infinix/X663/proprietary,$(TARGET_COPY_OUT_VENDOR)))
