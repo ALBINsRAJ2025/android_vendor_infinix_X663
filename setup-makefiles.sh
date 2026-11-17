@@ -1,10 +1,6 @@
 #!/bin/bash
 # SPDX-License-Identifier: Apache-2.0
 # Copyright (C) 2026 ALBINsRAJ2025
-#
-# Check that the source-built vendor tree is ready.
-# The makefiles are checked in; there is no generated vendor makefile here.
-#
 set -e
 
 HERE="$(cd "$(dirname "$0")" && pwd)"

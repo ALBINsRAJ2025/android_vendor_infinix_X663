@@ -1,14 +1,6 @@
 #!/bin/bash
 # SPDX-License-Identifier: Apache-2.0
 # Copyright (C) 2026 ALBINsRAJ2025
-#
-# Re-extract the proprietary files for the Infinix Note 11 (X663).
-#
-# Usage:
-#   ./extract-files.sh /path/to/stock_dump
-#
-# The argument must be the directory containing the stock vendor/ folder.
-#
 set -e
 
 HERE="$(cd "$(dirname "$0")" && pwd)"

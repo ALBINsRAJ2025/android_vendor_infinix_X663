@@ -1,8 +1,5 @@
 # SPDX-License-Identifier: Apache-2.0
 # Copyright (C) 2026 ALBINsRAJ2025
-# Vendor symlink module for the Infinix X663.
-# PRODUCT_COPY_FILES cannot preserve symlinks, so recreate them after
-# installation.
 
 LOCAL_PATH := $(call my-dir)
 
@@ -126,7 +123,6 @@ LOCAL_SRC_FILES := proprietary/overlay/WifiResOverlay/WifiResOverlay.apk
 LOCAL_CERTIFICATE := PRESIGNED
 include $(BUILD_PREBUILT)
 
-# <link path under /vendor>:<relative target>
 X663_SYMLINKS := \
     bin/[:toybox_vendor \
     bin/acpi:toybox_vendor \
