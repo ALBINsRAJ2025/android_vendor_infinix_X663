@@ -1,6 +1,7 @@
 #!/bin/bash
 # SPDX-License-Identifier: Apache-2.0
 # Copyright (C) 2026 ALBINsRAJ2025
+# Vendor extraction script
 set -e
 
 HERE="$(cd "$(dirname "$0")" && pwd)"

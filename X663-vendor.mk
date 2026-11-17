@@ -1,5 +1,6 @@
 # SPDX-License-Identifier: Apache-2.0
 # Copyright (C) 2026 ALBINsRAJ2025
+# Vendor makefile
 
 PRODUCT_COPY_FILES += \
     $(filter-out %.apk \

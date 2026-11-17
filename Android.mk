@@ -1,5 +1,6 @@
 # SPDX-License-Identifier: Apache-2.0
 # Copyright (C) 2026 ALBINsRAJ2025
+# Vendor symlink module
 
 LOCAL_PATH := $(call my-dir)
 
