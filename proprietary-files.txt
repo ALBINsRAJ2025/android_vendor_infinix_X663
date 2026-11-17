@@ -1,7 +1,5 @@
 # SPDX-License-Identifier: Apache-2.0
 # Copyright (C) 2026 ALBINsRAJ2025
-# Blobs pulled from X663-H6915ABCEFGHIO-S-GL-230918V670 (Android 12).
-# Paths are relative to the partition root (vendor/...).
 
 vendor/app/GoogleNetworkStackResOverlay/GoogleNetworkStackResOverlay.apk
 vendor/app/GoogleTetheringResOverlay/GoogleTetheringResOverlay.apk
