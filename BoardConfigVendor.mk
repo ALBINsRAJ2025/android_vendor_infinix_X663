@@ -7,3 +7,6 @@ DEVICE_MANIFEST_FILE += \
     vendor/infinix/X663/proprietary/etc/vintf/manifest.xml \
     $(filter-out %/android.hardware.cas@1.2-service-lazy.xml, \
         $(wildcard vendor/infinix/X663/proprietary/etc/vintf/manifest/*.xml))
+
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    $(abspath vendor/infinix/X663/vintf/compatibility_matrix.xml)
