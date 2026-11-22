@@ -10,6 +10,7 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/app
 LOCAL_SRC_FILES := proprietary/app/GoogleNetworkStackResOverlay/GoogleNetworkStackResOverlay.apk
 LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -18,6 +19,7 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/app
 LOCAL_SRC_FILES := proprietary/app/GoogleTetheringResOverlay/GoogleTetheringResOverlay.apk
 LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -26,6 +28,7 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/app
 LOCAL_SRC_FILES := proprietary/app/InProcessTetheringResOverlay/InProcessTetheringResOverlay.apk
 LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -34,6 +37,7 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/app
 LOCAL_SRC_FILES := proprietary/app/NetworkStackInProcessResOverlay/NetworkStackInProcessResOverlay.apk
 LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -42,6 +46,7 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/app
 LOCAL_SRC_FILES := proprietary/app/NetworkStackResOverlay/NetworkStackResOverlay.apk
 LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -50,6 +55,7 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/app
 LOCAL_SRC_FILES := proprietary/app/TetheringResOverlay/TetheringResOverlay.apk
 LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -58,6 +64,7 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/overlay
 LOCAL_SRC_FILES := proprietary/overlay/CellbroadcastUIResOverlay/CellbroadcastUIResOverlay.apk
 LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -66,6 +73,7 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/overlay
 LOCAL_SRC_FILES := proprietary/overlay/ConnectivityResOverlay/ConnectivityResOverlay.apk
 LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -74,6 +82,7 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/overlay
 LOCAL_SRC_FILES := proprietary/overlay/FrameworkResOverlay/FrameworkResOverlay.apk
 LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -82,6 +91,7 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/overlay
 LOCAL_SRC_FILES := proprietary/overlay/FrameworkResOverlayExt/FrameworkResOverlayExt.apk
 LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -90,6 +100,7 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/overlay
 LOCAL_SRC_FILES := proprietary/overlay/MtkSettingsResOverlay/MtkSettingsResOverlay.apk
 LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -98,6 +109,7 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/overlay
 LOCAL_SRC_FILES := proprietary/overlay/SettingsProviderResOverlay/SettingsProviderResOverlay.apk
 LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -106,6 +118,7 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/overlay
 LOCAL_SRC_FILES := proprietary/overlay/SystemUIResOverlay/SystemUIResOverlay.apk
 LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -114,6 +127,7 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/overlay
 LOCAL_SRC_FILES := proprietary/overlay/WifiResMainlineOverlay/WifiResMainlineOverlay.apk
 LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -122,6 +136,7 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/overlay
 LOCAL_SRC_FILES := proprietary/overlay/WifiResOverlay/WifiResOverlay.apk
 LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 X663_SYMLINKS := \
