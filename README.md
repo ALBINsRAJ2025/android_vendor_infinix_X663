@@ -2,7 +2,9 @@
 
 **Source-built vendor repository for the Infinix Note 11 — MediaTek MT6768 / Helio G88 (MT6769H), Android 12.**
 
-The vendor partition is compiled directly from `proprietary/` by `X663-vendor.mk` and `Android.mk`. **No raw prebuilt `vendor.img` is required.**
+<p align="center">
+  <img src="infinix-note-11-x663-github.png" alt="Infinix Note 11 X663" width="800" style="border-radius: 14px; box-shadow: 0 18px 40px rgba(0,0,0,0.45);" />
+</p>
 
 ---
 
@@ -44,30 +46,6 @@ lunch lineage_X663-userdebug
 mka bacon -j$(nproc --all)
 ```
 
-## 📁 Repository Contents
-
-```
-proprietary/             stock /vendor tree (committed, ~961 MB)
-proprietary-files.txt    flat blob list
-extract-files.sh         re-extract proprietary/ from a stock dump
-setup-makefiles.sh       validates the source-built vendor layout
-X663-vendor.mk           blob install, inherited by device.mk
-Android.mk               recreates the 196 vendor symlinks
-symlinks.dummy           input for the symlink module
-```
-
-`proprietary/` mirrors the stock factory `/vendor` tree: 2,222 regular files, 196 symlinks, and 87 subdirectories byte-identical to factory firmware.
-
-## ⚙️ Build Wiring
-
-* `device/infinix/X663/device.mk` inherits `X663-vendor.mk`.
-* `X663-vendor.mk` installs the regular files and adds the `x663_vendor_symlinks` module (recreates the 196 links, stock link text).
-* `configs/fs_config` supplies stock ownership and modes.
-* The empty stock `fs_config_files`, `fs_config_dirs`, `passwd`, `group` and the matching `odm` copies are filtered so platform-generated files win.
-* AOSP packages that overwrite stock files are filtered from `PRODUCT_PACKAGES`.
-* Stock `vendor_sepolicy.cil` and context files are installed as-is (`PRODUCT_PRECOMPILED_SEPOLICY := false` in the device tree; `X663_SEPOLICY_PORT` gates the source policy).
-* VNDK is pinned to 31, `vendor.prop` carries the stock vendor properties, and `VENDOR_SECURITY_PATCH := 2023-09-05` preserves the stock security patch.
-
 ## ⚖️ Licensing
 
-Original makefiles, scripts, and documentation are licensed under **Apache-2.0** (see `LICENSE` and `NOTICE`). `proprietary/` contains stock firmware blobs extracted from Infinix/Transsion firmware and remains subject to OEM terms.
+Original makefiles, scripts, and documentation are licensed under **Apache-2.0** (see `LICENSE` and `NOTICE`).
