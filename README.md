@@ -1,9 +1,13 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ALBINsRAJ2025/android_vendor_infinix_X663/lineage-19.1/assets/banner.png" width="100%" alt="LineageOS Banner"/>
+</p>
+
 # 📦 Vendor Blobs for Infinix Note 11 (X663)
 
-**Vendor repository for the Infinix Note 11 — MediaTek Helio G88 - MT6768 / MT6769H, Android 12.**
+**Source-built vendor repository for the Infinix Note 11 — MediaTek MT6768 / Helio G88 (MT6769H), Android 12.**
 
 <p align="center">
-  <img src="infinix-note-11-x663-github.png" alt="Infinix Note 11 X663" width="800" style="border-radius: 14px; box-shadow: 0 18px 40px rgba(0,0,0,0.45);" />
+  <img src="assets/infinix-note-11-x663-github.png" alt="Infinix Note 11 X663" width="800" style="border-radius: 14px; box-shadow: 0 18px 40px rgba(0,0,0,0.45);" />
 </p>
 
 ---
