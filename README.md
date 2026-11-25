@@ -1,6 +1,6 @@
 # 📦 Vendor Blobs for Infinix Note 11 (X663)
 
-**Source-built vendor repository for the Infinix Note 11 — MediaTek MT6768 / Helio G88 (MT6769H), Android 12.**
+**Vendor repository for the Infinix Note 11 — MediaTek Helio G88 - MT6768 / MT6769H, Android 12.**
 
 <p align="center">
   <img src="infinix-note-11-x663-github.png" alt="Infinix Note 11 X663" width="800" style="border-radius: 14px; box-shadow: 0 18px 40px rgba(0,0,0,0.45);" />
