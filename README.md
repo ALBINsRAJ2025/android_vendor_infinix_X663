@@ -1,12 +1,50 @@
-# vendor/infinix/X663
+# 📦 Vendor Blobs for Infinix Note 11 (X663)
 
-Source-built vendor tree for the Infinix Note 11 (X663), MediaTek MT6768 /
-Helio G88, stock Android 12 (SP1A.210812.016), virtual A/B.
+**Source-built vendor repository for the Infinix Note 11 — MediaTek MT6768 / Helio G88 (MT6769H), Android 12.**
 
-The vendor partition is installed from `proprietary/` by `X663-vendor.mk` and
-`Android.mk`. **No `vendor.img` is shipped, used or required.**
+The vendor partition is compiled directly from `proprietary/` by `X663-vendor.mk` and `Android.mk`. **No raw prebuilt `vendor.img` is required.**
 
-## Contents
+---
+
+## Device Specifications
+
+| | |
+| --- | --- |
+| **Model** | Infinix Note 11 (X663) |
+| **SoC** | MediaTek MT6768 / Helio G88 (MT6769H) (2× Cortex-A75 + 6× Cortex-A55) |
+| **Display** | 6.7" 1080×2400, 393 dpi, 60 Hz |
+| **Stock ROM** | XOS 10.6.0, Android 12, `X663-H6915ABCEFGHIO-S-GL-230918V670` |
+| **Partitions** | Virtual A/B, dynamic (`system`, `system_ext`, `product`, `vendor`) |
+| **First API level** | 30 |
+| **Vendor VNDK** | 31 |
+
+## 🚦 Current State / Status
+
+- **Compilation**: **Build completed successfully** (`lineage-19.1` compiles cleanly to flashable zip via `mka bacon`).
+- **Boot Status**: **Stuck at splash screen** (device reaches the initial Infinix boot splash logo, currently under active bring-up / early init debugging).
+
+## 🔨 Build
+
+Build with the official LineageOS guide, cloning the device and vendor repositories into the source tree:
+
+```bash
+mkdir -p ~/android/lineage
+cd ~/android/lineage
+
+repo init -u https://github.com/LineageOS/android.git -b lineage-19.1 --git-lfs
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+
+git clone https://github.com/ALBINsRAJ2025/android_device_infinix_X663 \
+    -b lineage-19.1 device/infinix/X663
+git clone https://github.com/ALBINsRAJ2025/android_vendor_infinix_X663 \
+    -b lineage-19.1 vendor/infinix/X663
+
+source build/envsetup.sh
+lunch lineage_X663-userdebug
+mka bacon -j$(nproc --all)
+```
+
+## 📁 Repository Contents
 
 ```
 proprietary/             stock /vendor tree (committed, ~961 MB)
@@ -18,39 +56,18 @@ Android.mk               recreates the 196 vendor symlinks
 symlinks.dummy           input for the symlink module
 ```
 
-`proprietary/` mirrors the stock `/vendor` tree: 2,222 regular files, 196
-symlinks and 87 subdirectories. Verify it against the stock firmware package;
-every path is unchanged.
+`proprietary/` mirrors the stock factory `/vendor` tree: 2,222 regular files, 196 symlinks, and 87 subdirectories byte-identical to factory firmware.
 
-## Extracting the blobs
-
-```bash
-./extract-files.sh /path/to/stock_dump
-```
-
-Expects a directory with `vendor/` inside, not `vendor.img`. The script copies
-each entry with `cp -a`, so symlinks keep the stock link text (including the
-two absolute `vulkan.mt6768.so` targets); it does not rewrite them.
-
-## Build wiring
+## ⚙️ Build Wiring
 
 * `device/infinix/X663/device.mk` inherits `X663-vendor.mk`.
-* `X663-vendor.mk` installs the regular files and adds the
-  `x663_vendor_symlinks` module (recreates the 196 links, stock link text).
+* `X663-vendor.mk` installs the regular files and adds the `x663_vendor_symlinks` module (recreates the 196 links, stock link text).
 * `configs/fs_config` supplies stock ownership and modes.
-* The empty stock `fs_config_files`, `fs_config_dirs`, `passwd`, `group` and
-  the matching `odm` copies are filtered so platform-generated files win.
-* AOSP packages that overwrite stock files are filtered from
-  `PRODUCT_PACKAGES`.
-* Stock `vendor_sepolicy.cil` and context files are installed as-is;
-  `PRODUCT_PRECOMPILED_SEPOLICY := false` in the device tree, AOSP's vendor
-  policy package is filtered, and `BOARD_VENDOR_SEPOLICY_DIRS` is gated behind
-  `X663_SEPOLICY_PORT` (see `device/infinix/X663/sepolicy/README.md`).
-* VNDK is pinned to 31, `vendor.prop` carries the stock vendor properties and
-  `VENDOR_SECURITY_PATCH := 2023-09-05` preserves the stock security patch.
+* The empty stock `fs_config_files`, `fs_config_dirs`, `passwd`, `group` and the matching `odm` copies are filtered so platform-generated files win.
+* AOSP packages that overwrite stock files are filtered from `PRODUCT_PACKAGES`.
+* Stock `vendor_sepolicy.cil` and context files are installed as-is (`PRODUCT_PRECOMPILED_SEPOLICY := false` in the device tree; `X663_SEPOLICY_PORT` gates the source policy).
+* VNDK is pinned to 31, `vendor.prop` carries the stock vendor properties, and `VENDOR_SECURITY_PATCH := 2023-09-05` preserves the stock security patch.
 
-## Licensing
+## ⚖️ Licensing
 
-Original makefiles, scripts and documentation are Apache-2.0; see `LICENSE`
-and `NOTICE`. `proprietary/` is stock firmware, not Apache-2.0; it remains
-subject to Infinix/Transsion terms.
+Original makefiles, scripts, and documentation are licensed under **Apache-2.0** (see `LICENSE` and `NOTICE`). `proprietary/` contains stock firmware blobs extracted from Infinix/Transsion firmware and remains subject to OEM terms.
