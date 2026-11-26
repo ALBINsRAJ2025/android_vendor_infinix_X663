@@ -10,6 +10,7 @@ PRODUCT_COPY_FILES += \
         vendor/infinix/X663/proprietary/odm_dlkm/etc/NOTICE.xml.gz:% \
         vendor/infinix/X663/proprietary/vendor_dlkm/etc/NOTICE.xml.gz:% \
         vendor/infinix/X663/proprietary/etc/init/vendor_flash_recovery.rc:% \
+        vendor/infinix/X663/proprietary/etc/init/chipinfo_init.rc:% \
         vendor/infinix/X663/proprietary/etc/vintf/% \
         vendor/infinix/X663/proprietary/etc/selinux/precompiled_sepolicy:% \
         vendor/infinix/X663/proprietary/etc/selinux/precompiled_sepolicy.% \
